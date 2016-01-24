@@ -1,0 +1,23 @@
+{
+    "name": "ognestraz/laravel-auth",
+    "description": "The Auth Module for Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "authors": [
+        {
+            "name": "ognestraz",
+            "email": "ognestraz@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ognestraz\\Auth\\": "src/app/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
