@@ -16,15 +16,19 @@ class AuthServiceProvider extends ServiceProvider
         }
         
         $pathViews = __DIR__.'/../../resources/views';
-        $packageName = 'auth-admin';
-        $this->loadViewsFrom($pathViews, $packageName);
+        $pathViewsLayouts = __DIR__.'/../../resources/layouts';
+        $packageName = 'auth';
         
-        $pathPublicCss = __DIR__.'/../../public/css/' . $packageName . '.css';
+        $pathAlias = base_path('resources/views/vendor/' . $packageName);
+        $this->loadViewsFrom($pathAlias, $packageName);
+        
+        $pathPublicCss = __DIR__.'/../../public/css/';
         $pathUnitTest = __DIR__.'/../../tests';
         
         $this->publishes([
-            $pathViews => base_path('resources/views/vendor/' . $packageName),
-            $pathPublicCss => base_path('public/css/' . $packageName . '.css'),
+            $pathViews => $pathAlias,
+            $pathViewsLayouts => base_path('resources/views/layouts'),
+            $pathPublicCss => base_path('public/css/'),
             $pathUnitTest => base_path('tests/vendor')
         ]);
     }

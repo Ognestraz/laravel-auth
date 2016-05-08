@@ -18,6 +18,8 @@ class AuthController extends \Illuminate\Routing\Controller
      */
     protected $redirectTo = '/';
     protected $redirectAfterLogout = '/login';
+    
+    protected $registerView = 'auth::register';
 
     /**
      * Create a new authentication controller instance.

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Auth Admin</title>
         <link rel='stylesheet' href='<?=elixir("css/bootstrap.css");?>' type='text/css' media='all' />
-        <link rel='stylesheet' href='<?=elixir("css/auth-admin.css");?>' type='text/css' media='all' />
+        <link rel='stylesheet' href='<?=elixir("css/auth.css");?>' type='text/css' media='all' />
     </head>
     <body>
         <div id="wrapper">
