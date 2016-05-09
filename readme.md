@@ -1,1 +1,1 @@
-Laravel Auth
+Laravel Auth Package
