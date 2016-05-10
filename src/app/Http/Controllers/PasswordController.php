@@ -21,6 +21,7 @@ class PasswordController extends \Illuminate\Routing\Controller
     protected $linkRequestView = 'auth::passwords.email';
     protected $resetView = 'auth::passwords.reset';
     protected $redirectTo = '/profile';
+    protected $subject = 'Восстановление пароля';
     
     /**
      * Create a new password controller instance.
