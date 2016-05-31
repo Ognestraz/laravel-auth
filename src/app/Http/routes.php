@@ -24,7 +24,7 @@ Route::group([
         Route::get('logout', 'AuthController@logout');
 
         Route::get('register', 'AuthController@showRegistrationForm');
-        Route::post('register', 'AuthController@register');
+        Route::post('register', 'AuthController@postRegister');
 
         Route::get('password/reset/{token?}', 'PasswordController@showResetForm');
         Route::post('password/email', 'PasswordController@sendResetLinkEmail');
