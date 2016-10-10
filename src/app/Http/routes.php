@@ -19,16 +19,18 @@ Route::group([
     'namespace' => '\App\Http\Controllers\Auth',
     'middleware' => ['web']
     ], function () {
-        Route::get('login', 'AuthController@showLoginForm');
-        Route::post('login', 'AuthController@login');
-        Route::get('logout', 'AuthController@logout');
+        Route::get('login', 'LoginController@showLoginForm');
+        Route::post('login', 'LoginController@login');
+        Route::get('logout', 'LoginController@logout');
 
-        Route::get('register', 'AuthController@showRegistrationForm');
-        Route::post('register', 'AuthController@postRegister');
+        Route::get('register', 'RegisterController@showRegistrationForm');
+        Route::post('register', 'RegisterController@postRegister');
 
-        Route::get('password/reset/{token?}', 'PasswordController@showResetForm');
-        Route::post('password/email', 'PasswordController@sendResetLinkEmail');
-        Route::post('password/reset', 'PasswordController@reset');
+        Route::get('password/email', 'ForgotPasswordController@showEmailForm');
+        Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail');
+
+        Route::get('password/reset/{token?}', 'ResetPasswordController@showResetForm');
+        Route::post('password/reset', 'ResetPasswordController@reset');
 });
 //
 //Route::group([
